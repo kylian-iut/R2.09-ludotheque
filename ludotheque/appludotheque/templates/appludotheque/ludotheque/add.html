@@ -1,0 +1,14 @@
+{% extends "appludotheque/template.html" %}
+{% block title %} AppLudotheque | Ajouter un jeu-vidéo {% endblock %}
+
+{% block content %}
+{{block.super}}
+<h1> Ajoutez un jeux-vidéo </h1>
+
+<form method="post" action="/ludotheque/processing/">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Ajouter le jeu">
+</form>
+
+{% endblock %}

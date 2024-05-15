@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{%static 'appludotheque/template.css' %}">
+        <title>{% block title %} AppLudotheque {% endblock %} </title>
+    </head>
+    <body>
+        <div class="content">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </body>
+</html>

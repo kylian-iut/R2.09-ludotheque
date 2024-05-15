@@ -1,0 +1,13 @@
+{% extends "appludotheque/template.html" %}
+{% block title %} Ludotheque | Success {% endblock %}
+
+{% block content %}
+{{block.super}}
+<h1> Jeu ajouté avec succès </h1>
+
+<p>Le jeu-vidéo {{Game.title}} a été ajouté</p>
+
+<a href="/ludotheque"> Retour à la liste des jeux-vidéos </a>
+
+
+{% endblock %}

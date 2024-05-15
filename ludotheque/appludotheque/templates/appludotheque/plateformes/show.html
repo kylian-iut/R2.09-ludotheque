@@ -1,0 +1,11 @@
+{% extends "appludotheque/template.html" %}
+{% block title %} AppLudotheque | {{plateforme.title}} {% endblock %}
+
+{% block content %}
+<h1>{{plateforme.name}}</h1>
+<p>Date de création: {{plateforme.creation_date}}</p>
+<p>Entreprise: {{plateforme.socity}}</p>
+<a href="/plateformes/update/{{plateforme.id}}"> Modifier </a>
+<a href="/plateformes/delete/{{plateforme.id}}"> Supprimer </a>
+<a href="/plateformes"> Retour à la liste des plateformess </a>
+{% endblock %}

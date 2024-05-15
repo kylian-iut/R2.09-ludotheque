@@ -1,0 +1,13 @@
+{% extends "appludotheque/template.html" %}
+{% block title %} Ludotheque | {{game.title}} {% endblock %}
+
+{% block content %}
+<h1>{{game.title}}</h1>
+<p>Plateforme: {{game.plateforme}}</p>
+<p>Année de sortie: {{game.release_date}}</p>
+<p>Tags: {{game.tags}}</p>
+<p>Resumé: {{game.resume}}</p>
+<a href="/ludotheque/update/{{game.id}}"> Modifier </a>
+<a href="/ludotheque/delete/{{game.id}}"> Supprimer </a>
+<a href="/ludotheque"> Retour à la liste des jeux-vidéos </a>
+{% endblock %}

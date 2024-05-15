@@ -1,0 +1,12 @@
+{% extends "appludotheque/template.html" %}
+{% block title %} AppLudotheque | Modifier une plateforme {% endblock %}
+
+{% block content %}
+<h1>Modifier la plateforme {{plateforme.name}}</h1>
+
+<form method="post" action="/plateformes/processing_update/{{plateforme.id}}/">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Mettre à jour"/>
+</form>
+{% endblock %}

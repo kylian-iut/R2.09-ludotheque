@@ -1,0 +1,15 @@
+{% extends "appludotheque/template.html" %}
+{% block title %} Plateformes | Success {% endblock %}
+
+{% block content %}
+{{block.super}}
+<h1> Plateforme ajouté avec succès </h1>
+
+<p>La plateforme {{plateforme.name}} a été ajouté</p>
+
+<!--<p>La plateforme {{plateforme.title}} a été ajouté</p>-->
+
+<a href="/plateformes"> Retour à la liste des plateformes </a>
+
+
+{% endblock %}

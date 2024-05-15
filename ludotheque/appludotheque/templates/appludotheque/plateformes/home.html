@@ -1,0 +1,34 @@
+{% extends "appludotheque/template.html" %}
+{% block title %} AppLudotheque | Plateformes {% endblock %}
+
+{% block content %}
+{{block.super}}
+<h1> Retrouver la listes des plateformes </h1>
+
+<table>
+    <thead>
+        <tr>
+            <th> Nom </th>
+            <th> Date de création </th>
+            <th> Entreprise </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for plateforme in plateformes %}
+        <tr>
+            <td> {{ plateforme.name }} </td>
+            <td> {{ plateforme.creation_date }} </td>
+            <td> {{ plateforme.socity }} </td>
+            <td> <a href="/plateformes/show/{{plateforme.id}}"> Afficher </a> </td>
+            <td> <a href="/plateformes/update/{{plateforme.id}}"> Modifier </a> </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<br>
+<a href="/plateformes/add"> Ajouter une plateforme </a>
+<!-- proposer un lien vers plateformes -->
+<a href="/ludotheque"> Voir les jeux-vidéos </a>
+<a href="/"> Revenir à la page principale </a>
+
+{% endblock %}

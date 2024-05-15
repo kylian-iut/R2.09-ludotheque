@@ -1,0 +1,19 @@
+{% extends "appludotheque/template.html" %}
+{% block title %} AppLudotheque | Home {% endblock %}
+
+{% block content %}
+{{block.super}}
+<h1> Bienvenue sur ma base de jeux-vidéos </h1>
+<p> Vous pouvez voir tous les jeux-vidéos et les plateformes sur lesquels on peut y jouer. </p>
+
+
+
+<p> Réalisé par kylian-iut</p>
+
+<!-- propose un lien vers la page de liste des animes -->
+<a href="ludotheque"> Liste des jeux-vidéos </a>
+
+<!-- propose un lien vers la page de liste des studios -->
+<a href="plateformes"> Liste des plateformes </a>
+
+{% endblock %}

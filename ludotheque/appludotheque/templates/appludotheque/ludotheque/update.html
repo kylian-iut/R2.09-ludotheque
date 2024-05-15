@@ -1,0 +1,12 @@
+{% extends "appludotheque/template.html" %}
+{% block title %} Ludotheque | Modifier un jeu-vidéo {% endblock %}
+
+{% block content %}
+<h1>Modifier le jeu-vidéo {{Game.title}}</h1>
+
+<form method="post" action="/ludotheque/processing_update/{{Game.id}}/">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Mettre à jour"/>
+</form>
+{% endblock %}

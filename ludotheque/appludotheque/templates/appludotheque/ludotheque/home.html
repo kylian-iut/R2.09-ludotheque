@@ -1,0 +1,34 @@
+{% extends "appludotheque/template.html" %}
+{% block title %} AppLudotheque | Ludotheque {% endblock %}
+
+{% block content %}
+{{block.super}}
+<h1> Retrouver la liste des jeux-vidéos </h1>
+
+<table>
+    <thead>
+        <tr>
+            <th> Titre </th>
+            <th> Plateforme </th>
+            <th> Année de sortie </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for game in games %}
+        <tr>
+            <td> {{game.title}} </td>
+            <td> {{game.plateforme}} </td>
+            <td> {{game.release_date}} </td>
+            <td> <a href="/ludotheque/show/{{game.id}}"> Afficher </a> </td>
+            <td> <a href="/ludotheque/update/{{game.id}}"> Modifier </a> </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<br>
+<a href="/ludotheque/add"> Ajouter un jeu-vidéo </a>
+<!-- proposer un lien vers plateforme -->
+<a href="/plateformes"> Voir les plateformes </a>
+<a href="/"> Revenir à la page principale </a>
+
+{% endblock %}
