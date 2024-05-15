@@ -14,7 +14,7 @@
 <p>1. Install the dependencies</p>
 
 ```
-pip install -r ./dependencies.txt
+pip install -r ./requirement.txt
 ```
 
 <p>2. Start the web service</p>
